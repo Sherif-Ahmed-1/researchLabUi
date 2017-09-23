@@ -1,19 +1,7 @@
-import { Component,OnInit } from '@angular/core';
-import { TestService } from './Service/testService'
+import { Component, OnInit } from '@angular/core';
+import { ProjectService } from './Service/Project.service'
 @Component({
   selector: 'my-app',
-  template: `<h1>dfsdf {{name}}</h1>`,
+  template: `<router-outlet></router-outlet>`,
 })
-export class AppComponent implements OnInit {
-    ngOnInit(): void {
-      this.service.test().subscribe(data=>{
-        console.log(data);
-        this.name=data.toString()
-      }
-        );
-    }
-
-    name = 'Angular';
-  constructor(private service: TestService) { }
-
-}
+export class AppComponent { }
