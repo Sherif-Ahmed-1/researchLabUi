@@ -6,5 +6,6 @@ applicantOrganization:string;
 budget:number;
 submissionDate:Date;
 abbreviation:string
+projectTypeId:number;
 
 }

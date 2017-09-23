@@ -15,6 +15,7 @@ export class ProjectService {
                 console.log(response)
                 let repsonseEntity = response.json();
                 console.log(repsonseEntity)
+                return repsonseEntity;
             }
             )
     }
