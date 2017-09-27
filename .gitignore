@@ -1,6 +1,7 @@
 .idea
 node_modules
 jspm_packages
+node_modules.rar
 npm-debug.log
 debug.log
 template
