@@ -11,7 +11,7 @@
                     <form role="form" (ngSubmit)="addProject()">
                         <div class="form-group">
                             <label>Project Title</label>
-                            <input name="projectTitle" class="form-control" placeholder="Title" [(ngModel)]="project.title">
+                            <input name="projectTitle" class="form-control" placeholder="Title" [(ngModel)]="project.title" required>
                         </div>
                         <div class="form-group">
                             <label>Applicant Name</label>
@@ -19,19 +19,25 @@
                         </div>
                         <div class="form-group">
                             <label>Applicant Org</label>
-                            <input name="applicantOrg" class="form-control" placeholder="applicant Org" [(ngModel)]="project.applicantOrganization" >
+                            <input name="applicantOrg" class="form-control" placeholder="applicant Org" [(ngModel)]="project.applicantOrganization">
                         </div>
                         <div class="form-group">
                             <label>Budget</label>
-                            <input name="budget" class="form-control " type="number" placeholder="Budget"  [(ngModel)]="project.budget">
+                            <input name="budget" class="form-control " type="number" placeholder="Budget" [(ngModel)]="project.budget">
                         </div>
                         <div class="form-group">
                             <label>submission Date</label>
-                            <input name="submissionDate" class="form-control " type="date"  [(ngModel)]="project.submissionDate">
+                            <input name="submissionDate" class="form-control " type="date" [(ngModel)]="project.submissionDate">
                         </div>
                         <div class="form-group">
                             <label>abbreviation</label>
-                            <textarea name="abbreviation" class="form-control" rows="3"  [(ngModel)]="project.abbreviation" ></textarea>
+                            <textarea name="abbreviation" class="form-control" rows="3" [(ngModel)]="project.abbreviation"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label>type</label>
+                        <select name="type" class="form-control" [(ngModel)]="project.projectTypeId" required>
+                              <option  *ngFor="let projectType of projectsType;let rowIndex = index" [ngValue]="projectType.id" >{{projectType.type}}</option>
+                        </select>
                         </div>
                         <button type="submit" class="btn btn-primary">Add</button>
                     </form>

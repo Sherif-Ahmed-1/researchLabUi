@@ -9,13 +9,14 @@ import { AddProjectComponent } from './component/addProject.component';
 import{LFMService} from './Service/LFM.service';
 import{ViewLFMComponent} from './component/viewLFM.component';
 import{AddLFMComponent} from './component/addLFM.component';
+import { ProjectTypeService } from './Service/ProjectType.service'
+import { AddProjectTypeComponent } from './component/addProjectType.component'
+import{ViewProjectComponent} from './component/ViewProject.component'
 
 
 
 @NgModule({
-  providers: [ProjectService,LFMService],
-  imports: [BrowserModule, FormsModule, HttpModule, AppRoutingModule],
-  declarations: [AppComponent, AddProjectComponent,ViewLFMComponent,AddLFMComponent],
-  bootstrap: [AppComponent]
+  providers: [ProjectService, ProjectTypeService,LFMService],  imports: [BrowserModule, FormsModule, HttpModule, AppRoutingModule],
+declarations: [AppComponent, AddProjectComponent, AddProjectTypeComponent,ViewProjectComponent,ViewLFMComponent,AddLFMComponent],  bootstrap: [AppComponent]
 })
 export class AppModule { }
